@@ -24,16 +24,23 @@ protocol Searchable {
 
 protocol PagingTable: Searchable { }
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController, ViewProvider, UISearchResultsUpdating {
 
     static let cellIdentifier = "ItemCell"
     static let searchPlaceholder = "Search"
+    
     let activityIndicatorView = UIActivityIndicatorView(style: .white)
+    
     var searchController: UISearchController = UISearchController(searchResultsController: nil)
     var isLoading: Bool = false
     var isDecelerating: Bool = false
     var items = [TitleDetailProvider]()
-
+    var presenter: ViewModelPresenter? {
+        didSet {
+            presenter?.loadInfo()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.titleView = self.activityIndicatorView
@@ -79,6 +86,24 @@ class BaseTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - ModelViewProvider protocol methods
+    
+    func configure(with decodedInfo: Decodable) {
+        
+    }
+    
+    func display(error: ModelError) {
+        showAlert(with: error)
+    }
+    
+    func setActivityIndicator(hidden: Bool) {
+        if hidden {
+            self.activityIndicatorView.stopAnimating()
+        } else {
+            self.activityIndicatorView.startAnimating()
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,7 +111,7 @@ class BaseTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
