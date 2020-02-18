@@ -17,6 +17,8 @@
 		02723F9F23FB9EB70003833B /* ResponsiveSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723F9E23FB9EB70003833B /* ResponsiveSearchUITests.swift */; };
 		02723FAE23FBAAC80003833B /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 02723FAD23FBAAC80003833B /* cities.json */; };
 		02723FB023FBAAD10003833B /* Instructions for the test.md in Resources */ = {isa = PBXBuildFile; fileRef = 02723FAF23FBAAD10003833B /* Instructions for the test.md */; };
+		02723FB323FBD7390003833B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FB223FBD7390003833B /* BaseTableViewController.swift */; };
+		02723FB623FBE3900003833B /* CityInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FB523FBE3900003833B /* CityInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		02723FA023FB9EB70003833B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02723FAD23FBAAC80003833B /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		02723FAF23FBAAD10003833B /* Instructions for the test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Instructions for the test.md"; sourceTree = "<group>"; };
+		02723FB223FBD7390003833B /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		02723FB523FBE3900003833B /* CityInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +147,29 @@
 		02723FB123FBAE850003833B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				02723F7E23FB9EB60003833B /* MasterViewController.swift */,
-				02723F8023FB9EB60003833B /* DetailViewController.swift */,
+				02723FB723FBE3970003833B /* ViewControllers */,
+				02723FB423FBE3600003833B /* Models */,
 				02723F8223FB9EB60003833B /* Main.storyboard */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		02723FB423FBE3600003833B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02723FB523FBE3900003833B /* CityInformation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02723FB723FBE3970003833B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				02723FB223FBD7390003833B /* BaseTableViewController.swift */,
+				02723F7E23FB9EB60003833B /* MasterViewController.swift */,
+				02723F8023FB9EB60003833B /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02723F8123FB9EB60003833B /* DetailViewController.swift in Sources */,
+				02723FB623FBE3900003833B /* CityInformation.swift in Sources */,
 				02723F7F23FB9EB60003833B /* MasterViewController.swift in Sources */,
+				02723FB323FBD7390003833B /* BaseTableViewController.swift in Sources */,
 				02723F7D23FB9EB60003833B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
