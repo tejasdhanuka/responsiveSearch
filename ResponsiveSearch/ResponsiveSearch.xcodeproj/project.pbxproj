@@ -19,6 +19,12 @@
 		02723FB023FBAAD10003833B /* Instructions for the test.md in Resources */ = {isa = PBXBuildFile; fileRef = 02723FAF23FBAAD10003833B /* Instructions for the test.md */; };
 		02723FB323FBD7390003833B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FB223FBD7390003833B /* BaseTableViewController.swift */; };
 		02723FB623FBE3900003833B /* CityInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FB523FBE3900003833B /* CityInformation.swift */; };
+		02723FB923FBE7650003833B /* ModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FB823FBE7650003833B /* ModelProvider.swift */; };
+		02723FBB23FBE78D0003833B /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FBA23FBE78D0003833B /* ViewProvider.swift */; };
+		02723FBD23FBE7A00003833B /* ViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FBC23FBE7A00003833B /* ViewModelPresenter.swift */; };
+		02723FC023FBE8500003833B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FBF23FBE8500003833B /* String+Extensions.swift */; };
+		02723FC223FBE8BF0003833B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FC123FBE8BF0003833B /* UIViewController+Extensions.swift */; };
+		02723FC423FBE8CF0003833B /* ArrayCityInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FC323FBE8CF0003833B /* ArrayCityInfo+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		02723FAF23FBAAD10003833B /* Instructions for the test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Instructions for the test.md"; sourceTree = "<group>"; };
 		02723FB223FBD7390003833B /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		02723FB523FBE3900003833B /* CityInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInformation.swift; sourceTree = "<group>"; };
+		02723FB823FBE7650003833B /* ModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProvider.swift; sourceTree = "<group>"; };
+		02723FBA23FBE78D0003833B /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
+		02723FBC23FBE7A00003833B /* ViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenter.swift; sourceTree = "<group>"; };
+		02723FBF23FBE8500003833B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		02723FC123FBE8BF0003833B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		02723FC323FBE8CF0003833B /* ArrayCityInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayCityInfo+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +159,7 @@
 		02723FB123FBAE850003833B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				02723FBE23FBE8380003833B /* Extensions */,
 				02723FB723FBE3970003833B /* ViewControllers */,
 				02723FB423FBE3600003833B /* Models */,
 				02723F8223FB9EB60003833B /* Main.storyboard */,
@@ -158,6 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				02723FB523FBE3900003833B /* CityInformation.swift */,
+				02723FB823FBE7650003833B /* ModelProvider.swift */,
+				02723FBA23FBE78D0003833B /* ViewProvider.swift */,
+				02723FBC23FBE7A00003833B /* ViewModelPresenter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +186,16 @@
 				02723F8023FB9EB60003833B /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		02723FBE23FBE8380003833B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02723FBF23FBE8500003833B /* String+Extensions.swift */,
+				02723FC123FBE8BF0003833B /* UIViewController+Extensions.swift */,
+				02723FC323FBE8CF0003833B /* ArrayCityInfo+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +333,15 @@
 			files = (
 				02723F8123FB9EB60003833B /* DetailViewController.swift in Sources */,
 				02723FB623FBE3900003833B /* CityInformation.swift in Sources */,
+				02723FC223FBE8BF0003833B /* UIViewController+Extensions.swift in Sources */,
+				02723FB923FBE7650003833B /* ModelProvider.swift in Sources */,
+				02723FC423FBE8CF0003833B /* ArrayCityInfo+Extensions.swift in Sources */,
 				02723F7F23FB9EB60003833B /* MasterViewController.swift in Sources */,
+				02723FC023FBE8500003833B /* String+Extensions.swift in Sources */,
+				02723FBB23FBE78D0003833B /* ViewProvider.swift in Sources */,
 				02723FB323FBD7390003833B /* BaseTableViewController.swift in Sources */,
 				02723F7D23FB9EB60003833B /* AppDelegate.swift in Sources */,
+				02723FBD23FBE7A00003833B /* ViewModelPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
