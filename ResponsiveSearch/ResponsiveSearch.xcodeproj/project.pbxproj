@@ -103,11 +103,9 @@
 		02723F7B23FB9EB60003833B /* ResponsiveSearch */ = {
 			isa = PBXGroup;
 			children = (
+				02723FB123FBAE850003833B /* Source */,
 				02723FAC23FBAA980003833B /* Resources */,
 				02723F7C23FB9EB60003833B /* AppDelegate.swift */,
-				02723F7E23FB9EB60003833B /* MasterViewController.swift */,
-				02723F8023FB9EB60003833B /* DetailViewController.swift */,
-				02723F8223FB9EB60003833B /* Main.storyboard */,
 				02723F8523FB9EB60003833B /* Assets.xcassets */,
 				02723F8723FB9EB60003833B /* LaunchScreen.storyboard */,
 				02723F8A23FB9EB60003833B /* Info.plist */,
@@ -140,6 +138,16 @@
 				02723FAD23FBAAC80003833B /* cities.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		02723FB123FBAE850003833B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				02723F7E23FB9EB60003833B /* MasterViewController.swift */,
+				02723F8023FB9EB60003833B /* DetailViewController.swift */,
+				02723F8223FB9EB60003833B /* Main.storyboard */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
