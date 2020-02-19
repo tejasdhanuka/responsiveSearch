@@ -31,6 +31,7 @@
 		02F613A323FD15E700F19027 /* ViewProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A223FD15E700F19027 /* ViewProviderTests.swift */; };
 		02F613A523FD161A00F19027 /* ViewModelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */; };
 		02F613A723FD23AA00F19027 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02F613A623FD23AA00F19027 /* README.md */; };
+		02F613A923FD2EE300F19027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A823FD2EE300F19027 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		02F613A223FD15E700F19027 /* ViewProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProviderTests.swift; sourceTree = "<group>"; };
 		02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenterTests.swift; sourceTree = "<group>"; };
 		02F613A623FD23AA00F19027 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
+		02F613A823FD2EE300F19027 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				02723F8523FB9EB60003833B /* Assets.xcassets */,
 				02723F8723FB9EB60003833B /* LaunchScreen.storyboard */,
 				02723F8A23FB9EB60003833B /* Info.plist */,
+				02F613A823FD2EE300F19027 /* Constants.swift */,
 			);
 			path = ResponsiveSearch;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				02723FB323FBD7390003833B /* BaseTableViewController.swift in Sources */,
 				02723F7D23FB9EB60003833B /* AppDelegate.swift in Sources */,
 				02723FBD23FBE7A00003833B /* ViewModelPresenter.swift in Sources */,
+				02F613A923FD2EE300F19027 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,9 +25,6 @@ protocol Searchable {
 protocol PagingTable: Searchable { }
 
 class BaseTableViewController: UITableViewController, ViewProvider, UISearchResultsUpdating {
-
-    static let cellIdentifier = "ItemCell"
-    static let searchPlaceholder = "Search"
     
     let activityIndicatorView = UIActivityIndicatorView(style: .white)
     
@@ -35,6 +32,7 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
     var isLoading: Bool = false
     var isDecelerating: Bool = false
     var items = [TitleDetailProvider]()
+    
     var presenter: ViewModelPresenter? {
         didSet {
             presenter?.loadInfo()
@@ -45,7 +43,7 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
         super.viewDidLoad()
         self.navigationItem.titleView = self.activityIndicatorView
         self.activityIndicatorView.hidesWhenStopped = true
-        tableView.backgroundColor = UIColor(red: 40, green: 47, blue: 60, alpha: 1)
+        tableView.backgroundColor = UIColor(red: 40.0/255.0, green: 47.0/255.0, blue: 60.0/255.0, alpha: 1.0)
         self.activityIndicatorView.accessibilityIdentifier = "activityIndicator"
     }
 
@@ -61,7 +59,7 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
             searchController.searchBar.sizeToFit()
             searchController.searchBar.searchBarStyle = .minimal
             searchController.searchBar.tintColor = UIColor.white
-            searchController.searchBar.placeholder = BaseTableViewController.searchPlaceholder
+            searchController.searchBar.placeholder = Constants.searchPlaceholder
             searchController.searchResultsUpdater = self
             searchController.searchBar.accessibilityIdentifier = "searchBar"
             
@@ -119,10 +117,10 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
         let cell: UITableViewCell
         
         let cellStyle = (self as? CellStyleCustomizable)?.cellStyle ?? .subtitle
-        if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewController.cellIdentifier) {
+        if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) {
             cell = dequeuedCell
         } else {
-            cell = UITableViewCell(style: cellStyle, reuseIdentifier: BaseTableViewController.cellIdentifier)
+            cell = UITableViewCell(style: cellStyle, reuseIdentifier: Constants.cellIdentifier)
             cell.selectionStyle = .none
         }
         

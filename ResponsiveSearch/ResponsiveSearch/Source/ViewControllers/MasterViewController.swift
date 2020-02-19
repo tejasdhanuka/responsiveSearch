@@ -10,10 +10,6 @@ import UIKit
 
 class MasterViewController: BaseTableViewController, PagingTable {
     
-    static let citiesJSONFile = "cities"
-    static let detailSegueIdentifier = "showDetail"
-    static let pageLimit = 50
-    
     var decodedInfo = [CityInfo]()
 
     override func viewDidLoad() {
@@ -32,7 +28,7 @@ class MasterViewController: BaseTableViewController, PagingTable {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == MasterViewController.detailSegueIdentifier {
+        if segue.identifier == Constants.detailSegueIdentifier {
             guard let detailViewController = (segue.destination as? UINavigationController)?.topViewController as? DetailViewController
                 else { return }
             
@@ -47,7 +43,7 @@ class MasterViewController: BaseTableViewController, PagingTable {
     // MARK: - Table View delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: MasterViewController.detailSegueIdentifier, sender: nil)
+        performSegue(withIdentifier: Constants.detailSegueIdentifier, sender: nil)
         searchController.isActive = false
     }
     
@@ -83,7 +79,7 @@ class MasterViewController: BaseTableViewController, PagingTable {
                 self.setActivityIndicator(hidden: false)
             }
             let startIndex = self.items.count
-            var endIndex = startIndex + MasterViewController.pageLimit
+            var endIndex = startIndex + Constants.pageLimit
             guard let query = query, !query.isEmpty else {
                 if endIndex > self.decodedInfo.count {
                     endIndex = self.decodedInfo.count

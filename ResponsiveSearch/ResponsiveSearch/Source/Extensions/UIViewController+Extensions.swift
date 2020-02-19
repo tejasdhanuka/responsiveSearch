@@ -26,6 +26,7 @@ extension UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: (handler != nil) ? handler : { _ in })
         alertController.addAction(okAction)
         alertController.view.tintColor = UIColor.black
+        alertController.view.layoutIfNeeded()
         self.present(alertController, animated: true, completion: nil)
     }
 }

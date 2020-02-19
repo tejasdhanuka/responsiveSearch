@@ -13,7 +13,6 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    static let annotationIdentifier = "CityAnnotation"
     var detailItem: TitleDetailProvider?
 
     override func viewDidLoad() {
@@ -58,12 +57,12 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         
         if annotation is MKUserLocation { return nil }
         
-        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: DetailViewController.annotationIdentifier) {
+        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: Constants.annotationIdentifier) {
             annotationView.annotation = annotation
             annotationView.accessibilityIdentifier = "annotationView"
             return annotationView
         } else {
-            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier: DetailViewController.annotationIdentifier)
+            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier: Constants.annotationIdentifier)
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
             annotationView.accessibilityIdentifier = "annotationView"
