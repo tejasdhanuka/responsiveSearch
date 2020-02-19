@@ -65,7 +65,7 @@ class MasterViewController: BaseTableViewController, PagingTable {
             self?.tableView.reloadData()
             
             let label = UILabel(frame: .zero)
-            label.textColor = UIColor.black
+            label.textColor = UIColor.white
             label.accessibilityIdentifier = "citiesListTitle"
             label.text = "Responsive Search"
             label.font = UIFont.boldSystemFont(ofSize: 18)

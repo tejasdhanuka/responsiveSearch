@@ -27,7 +27,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         // Update the user interface for the detail item.
         if let detailItem = detailItem {
             title = detailItem.title
-            
+    
             let annotation = MKPointAnnotation()
             annotation.title = detailItem.title
             annotation.subtitle = detailItem.detail

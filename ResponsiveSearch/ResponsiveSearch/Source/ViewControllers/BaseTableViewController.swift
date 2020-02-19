@@ -45,6 +45,7 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
         super.viewDidLoad()
         self.navigationItem.titleView = self.activityIndicatorView
         self.activityIndicatorView.hidesWhenStopped = true
+        tableView.backgroundColor = UIColor(red: 40, green: 47, blue: 60, alpha: 1)
         self.activityIndicatorView.accessibilityIdentifier = "activityIndicator"
     }
 
@@ -130,8 +131,14 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
         cell.detailTextLabel?.accessibilityIdentifier = "CellDetailLabel-\(indexPath.row)"
         
         let item = items[indexPath.row]
+        
+        cell.textLabel?.textColor = UIColor.white
+        cell.detailTextLabel?.textColor = UIColor.white
+
         cell.textLabel?.text = item.title
         cell.detailTextLabel?.text = item.detail
+        cell.backgroundColor = UIColor(red: 40.0/255.0, green: 47.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+
         
         return cell
     }

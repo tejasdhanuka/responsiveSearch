@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 40.0/255.0, green: 47.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 40.0/255.0, green: 47.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white,
+                                                            .font: UIFont.systemFont(ofSize: 16)]
+        UITextField.appearance().keyboardAppearance = .dark
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+            .defaultTextAttributes = [.foregroundColor: UIColor.white]
+
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
