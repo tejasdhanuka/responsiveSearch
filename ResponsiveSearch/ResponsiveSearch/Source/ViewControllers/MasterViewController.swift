@@ -13,11 +13,11 @@ class MasterViewController: BaseTableViewController, PagingTable {
     static let citiesJSONFile = "cities"
     static let detailSegueIdentifier = "showDetail"
     static let pageLimit = 50
+    
     var decodedInfo = [CityInfo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         tableView.accessibilityIdentifier = "citiesListView"
         let modelPresenter = Presenter(view: self, model: ModelType<Array<CityInfo>>.cities)
         presenter = modelPresenter
@@ -65,9 +65,10 @@ class MasterViewController: BaseTableViewController, PagingTable {
             self?.tableView.reloadData()
             
             let label = UILabel(frame: .zero)
-            label.textColor = UIColor.white
+            label.textColor = UIColor.black
             label.accessibilityIdentifier = "citiesListTitle"
             label.text = "Responsive Search"
+            label.font = UIFont.boldSystemFont(ofSize: 18)
             label.sizeToFit()
             self?.navigationItem.titleView = label
         }

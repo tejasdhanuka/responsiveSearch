@@ -47,5 +47,11 @@ enum ModelType<T>: ModelProvider where T : Decodable {
 
 public enum ModelError: Error {
     case failedLoading
+    
+    public var errorDescription: String? {
+        switch self {
+        case .failedLoading: return "Failed to load"
+        }
+    }
 }
 

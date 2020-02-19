@@ -117,7 +117,7 @@ class BaseTableViewController: UITableViewController, ViewProvider, UISearchResu
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
         
-        let cellStyle = (self as? CellStyleCustomizable)?.cellStyle ?? .default
+        let cellStyle = (self as? CellStyleCustomizable)?.cellStyle ?? .subtitle
         if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewController.cellIdentifier) {
             cell = dequeuedCell
         } else {

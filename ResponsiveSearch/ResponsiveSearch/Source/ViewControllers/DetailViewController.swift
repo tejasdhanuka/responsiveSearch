@@ -18,10 +18,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         mapView.accessibilityIdentifier = "mapViewIdentifier"
-        
         mapView.delegate = self
         configureView()
     }
@@ -41,9 +38,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
             
             let region = MKCoordinateRegion(center: annotation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
             mapView.setRegion(region, animated: true)
-            
             mapView.selectAnnotation(annotation, animated: true)
-            
             recursive(with: mapView)
         }
     }
