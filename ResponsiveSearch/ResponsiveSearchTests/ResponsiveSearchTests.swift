@@ -19,15 +19,29 @@ class ResponsiveSearchTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
+    func testPerformanceDecodeCities() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            _ = "cities".decode(Array<CityInfo>.self)
+        }
+    }
+    
+    func testPerformanceSearchCities() {
+        let cities: [CityInfo] = "cities".decode(Array<CityInfo>.self) ?? []
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+            _ = cities.filtered(with: "a")
+        }
+    }
+    
+    func testPerformanceSortCities() {
+        let cities: [CityInfo] = "cities".decode(Array<CityInfo>.self) ?? []
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+            _ = cities.sortedByCityFirst()
         }
     }
 

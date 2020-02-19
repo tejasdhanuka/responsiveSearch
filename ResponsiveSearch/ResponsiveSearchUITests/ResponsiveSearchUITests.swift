@@ -8,7 +8,14 @@
 
 import XCTest
 
+extension XCUIApplication {
+    var isDisplayingCitiesList: Bool {
+        return otherElements["citiesListView"].exists
+    }
+}
+
 class ResponsiveSearchUITests: XCTestCase {
+    let app = XCUIApplication()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,9 +33,76 @@ class ResponsiveSearchUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testCitiesList() {
         // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        app.tables.element.cells["Cell-7"].swipeUp()
+        
+        XCTAssertTrue(app.tables.element.identifier == "citiesListView")
+        let element = app.tables.element.staticTexts["CellTitleLabel-7"]
+        XCTAssertTrue(element.label == "A dos Cunhados, PT")
     }
-
+    
+    func testCitiesListDetail() {
+        // Use recording to get started writing UI tests.
+        
+        app.tables.element.cells["Cell-7"].swipeUp()
+        app.tables.element.staticTexts["CellTitleLabel-7"].tap()
+        
+        XCTAssertTrue(app.tables.element.identifier == "citiesListView")
+        XCTAssertTrue(app.navigationBars.buttons["Responsive Search"].label == "Responsive Search")
+        XCTAssertTrue(app.navigationBars.element.identifier == "A dos Cunhados, PT")
+    }
+    
+    func testCitiesSearch() {
+        // Use recording to get started writing UI tests.
+        
+        app/*@START_MENU_TOKEN@*/.searchFields["Search"]/*[[".otherElements[\"searchBar\"].searchFields[\"Search\"]",".searchFields[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.typeText("t")
+        app.typeText("e")
+        app.typeText("s")
+        app.typeText("t")
+        
+        XCTAssertTrue(((app.searchFields.element.value as? String) != nil))
+        XCTAssertTrue(((app.searchFields.element.value as? String) == "test"))
+        let element = app.tables.element.staticTexts["CellTitleLabel-6"]
+        if element.waitForExistence(timeout: 2.0) {
+            XCTAssertTrue(element.label == "Testorf-Steinfort, DE")
+        } else {
+            XCTFail("Element CellTitleLabel-6 either needs more time to exist or doesn't exist at all")
+        }
+    }
+    
+    func testCitiesSearchCancel() {
+        // Use recording to get started writing UI tests.
+        
+        app/*@START_MENU_TOKEN@*/.searchFields["Search"]/*[[".otherElements[\"searchBar\"].searchFields[\"Search\"]",".searchFields[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.typeText("t")
+        app.typeText("e")
+        app.typeText("s")
+        app.typeText("t")
+        app/*@START_MENU_TOKEN@*/.buttons["Cancel"]/*[[".otherElements[\"searchBar\"].buttons[\"Cancel\"]",".buttons[\"Cancel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCTAssertTrue(((app.searchFields.element.value as? String) != nil))
+        XCTAssertTrue(((app.searchFields.element.value as? String) == "Search"))
+        let element = app.tables.element.staticTexts["CellTitleLabel-7"]
+        if element.waitForExistence(timeout: 2.0) {
+            XCTAssertTrue(element.label == "A dos Cunhados, PT")
+        } else {
+            XCTFail("Element CellTitleLabel-7 either needs more time to exist or doesn't exist at all")
+        }
+    }
+    
+    func testCitiesSearchDetail() {
+        // Use recording to get started writing UI tests.
+        
+        app/*@START_MENU_TOKEN@*/.searchFields["Search"]/*[[".otherElements[\"searchBar\"].searchFields[\"Search\"]",".searchFields[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.typeText("t")
+        app.typeText("e")
+        app.typeText("s")
+        app.typeText("t")
+        app.tables.element.staticTexts["CellDetailLabel-4"].tap()
+        
+        XCTAssertTrue(app.navigationBars.buttons["Responsive Search"].label == "Responsive Search")
+        XCTAssertTrue(app.navigationBars.element.identifier == "Testorf, DE")
+    }
 }

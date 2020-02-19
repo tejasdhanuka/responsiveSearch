@@ -25,6 +25,11 @@
 		02723FC023FBE8500003833B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FBF23FBE8500003833B /* String+Extensions.swift */; };
 		02723FC223FBE8BF0003833B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FC123FBE8BF0003833B /* UIViewController+Extensions.swift */; };
 		02723FC423FBE8CF0003833B /* ArrayCityInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02723FC323FBE8CF0003833B /* ArrayCityInfo+Extensions.swift */; };
+		02F6139D23FD14CE00F19027 /* citiesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 02F6139C23FD14CE00F19027 /* citiesTest.json */; };
+		02F6139F23FD150B00F19027 /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6139E23FD150B00F19027 /* SearchFilterTests.swift */; };
+		02F613A123FD157D00F19027 /* ModelProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A023FD157D00F19027 /* ModelProviderTests.swift */; };
+		02F613A323FD15E700F19027 /* ViewProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A223FD15E700F19027 /* ViewProviderTests.swift */; };
+		02F613A523FD161A00F19027 /* ViewModelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		02723FBF23FBE8500003833B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		02723FC123FBE8BF0003833B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		02723FC323FBE8CF0003833B /* ArrayCityInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArrayCityInfo+Extensions.swift"; sourceTree = "<group>"; };
+		02F6139C23FD14CE00F19027 /* citiesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citiesTest.json; sourceTree = "<group>"; };
+		02F6139E23FD150B00F19027 /* SearchFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterTests.swift; sourceTree = "<group>"; };
+		02F613A023FD157D00F19027 /* ModelProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProviderTests.swift; sourceTree = "<group>"; };
+		02F613A223FD15E700F19027 /* ViewProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProviderTests.swift; sourceTree = "<group>"; };
+		02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				02723F9323FB9EB70003833B /* ResponsiveSearchTests.swift */,
+				02F6139E23FD150B00F19027 /* SearchFilterTests.swift */,
+				02F613A023FD157D00F19027 /* ModelProviderTests.swift */,
+				02F613A223FD15E700F19027 /* ViewProviderTests.swift */,
+				02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */,
+				02F6139C23FD14CE00F19027 /* citiesTest.json */,
 				02723F9523FB9EB70003833B /* Info.plist */,
 			);
 			path = ResponsiveSearchTests;
@@ -314,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F6139D23FD14CE00F19027 /* citiesTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F613A123FD157D00F19027 /* ModelProviderTests.swift in Sources */,
+				02F613A523FD161A00F19027 /* ViewModelPresenterTests.swift in Sources */,
 				02723F9423FB9EB70003833B /* ResponsiveSearchTests.swift in Sources */,
+				02F6139F23FD150B00F19027 /* SearchFilterTests.swift in Sources */,
+				02F613A323FD15E700F19027 /* ViewProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
