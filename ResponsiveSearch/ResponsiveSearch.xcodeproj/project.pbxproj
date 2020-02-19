@@ -30,6 +30,7 @@
 		02F613A123FD157D00F19027 /* ModelProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A023FD157D00F19027 /* ModelProviderTests.swift */; };
 		02F613A323FD15E700F19027 /* ViewProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A223FD15E700F19027 /* ViewProviderTests.swift */; };
 		02F613A523FD161A00F19027 /* ViewModelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */; };
+		02F613A723FD23AA00F19027 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02F613A623FD23AA00F19027 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		02F613A023FD157D00F19027 /* ModelProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProviderTests.swift; sourceTree = "<group>"; };
 		02F613A223FD15E700F19027 /* ViewProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProviderTests.swift; sourceTree = "<group>"; };
 		02F613A423FD161A00F19027 /* ViewModelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenterTests.swift; sourceTree = "<group>"; };
+		02F613A623FD23AA00F19027 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		02723FAC23FBAA980003833B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				02F613A623FD23AA00F19027 /* README.md */,
 				02723FAF23FBAAD10003833B /* Instructions for the test.md */,
 				02723FAD23FBAAC80003833B /* cities.json */,
 			);
@@ -317,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F613A723FD23AA00F19027 /* README.md in Resources */,
 				02723FAE23FBAAC80003833B /* cities.json in Resources */,
 				02723F8923FB9EB60003833B /* LaunchScreen.storyboard in Resources */,
 				02723F8623FB9EB60003833B /* Assets.xcassets in Resources */,
